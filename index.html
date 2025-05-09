@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Baseball Player Search</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    input {
+      padding: 10px;
+      width: 300px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Search Baseball Player</h1>
+  <input type="text" id="playerName" placeholder="Enter player name">
+  <button onclick="searchPlayer()">Search</button>
+
+  <script>
+    function searchPlayer() {
+      const name = document.getElementById('playerName').value.trim();
+      if (!name) return;
+
+      const encodedName = encodeURIComponent(name);
+      const urls = [
+        `https://www.baseball-reference.com/search/search.fcgi?search=${encodedName}`,
+        `https://www.fangraphs.com/search.aspx?search=${encodedName}`,
+        `https://baseballsavant.mlb.com/savant-search?searchTerm=${encodedName}`
+      ];
+
+      urls.forEach(url => window.open(url, '_blank'));
+    }
+  </script>
+</body>
+</html>
