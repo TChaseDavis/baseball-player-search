@@ -4,105 +4,91 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Baseball Player Search</title>
-  <meta name="description" content="Search for a baseball player and open their stats on Baseball Reference, Fangraphs, and Baseball Savant.">
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      text-align: center;
-      padding: 100px 20px;
-    }
-
-    h1 {
-      color: #333;
+      padding: 2rem;
+      background-color: #f8f9fa;
+      color: #212529;
     }
 
     label {
-      font-size: 16px;
+      font-weight: bold;
       display: block;
-      margin-bottom: 8px;
-      color: #333;
+      margin-bottom: 0.5rem;
     }
 
-    input {
-      padding: 10px;
-      width: 300px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    input:focus,
-    button:focus {
-      outline: 2px solid #0077cc;
-      outline-offset: 2px;
+    input[type="text"] {
+      width: 100%;
+      max-width: 400px;
+      padding: 0.5rem;
+      font-size: 1rem;
+      margin-bottom: 1rem;
     }
 
     button {
-      padding: 10px 20px;
-      font-size: 16px;
-      margin-left: 10px;
-      background-color: #0077cc;
-      color: white;
-      border: none;
-      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
       cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #005fa3;
-    }
-
-    footer {
-      margin-top: 50px;
-      color: #777;
-      font-size: 14px;
     }
   </style>
 </head>
 <body>
-  <main role="main">
-    <h1>Search Baseball Player</h1>
-
-    <label for="playerName" id="playerLabel">Player Name:</label>
+  <main>
+    <h1>Baseball Player Search</h1>
+    <label for="playerName" id="playerLabel">Search for a player:</label>
     <input
-  type="text"
-  id="playerName"
-  list="playerSuggestions"
-  placeholder="Enter player name"
-  aria-labelledby="playerLabel"
-  onkeydown="handleKey(event)"
-/>
-<datalist id="playerSuggestions"></datalist>
-    <button onclick="searchPlayer()" aria-label="Search for player">Search</button>
+      type="text"
+      id="playerName"
+      name="playerName"
+      list="playerSuggestions"
+      placeholder="Enter player name"
+      aria-labelledby="playerLabel"
+      onkeydown="handleKey(event)"
+    />
+    <datalist id="playerSuggestions"></datalist>
+    <button onclick="searchPlayer()" aria-label="Search player and open profiles">Search</button>
   </main>
 
-  <footer role="contentinfo">
-    Built with MLB Stats API, Baseball Savant, Fangraphs, and Baseball Reference
-  </footer>
-<script>
-  window.addEventListener('DOMContentLoaded', async () => {
-    try {
-      const response = await fetch('players.json');
-      const players = await response.json();
-
-      const datalist = document.getElementById('playerSuggestions');
-      if (!datalist) {
-        console.error('Datalist element not found.');
-        return;
+  <script>
+    function handleKey(event) {
+      if (event.key === 'Enter') {
+        searchPlayer();
       }
-
-      players.forEach(player => {
-        const option = document.createElement('option');
-        option.value = player;
-        datalist.appendChild(option);
-      });
-
-      console.log('Player suggestions loaded:', players);
-    } catch (error) {
-      console.error('Could not load player suggestions:', error);
     }
-  });
-</script>
+
+    function searchPlayer() {
+      const name = document.getElementById("playerName").value.trim();
+      if (!name) return;
+
+      const encodedName = encodeURIComponent(name);
+      const referenceURL = `https://www.baseball-reference.com/search/search.fcgi?search=${encodedName}`;
+      const fangraphsURL = `https://www.fangraphs.com/players.aspx?search=${encodedName}`;
+      const savantURL = `https://baseballsavant.mlb.com/savant-search?search=${encodedName}`;
+
+      window.open(referenceURL, "_blank");
+      window.open(fangraphsURL, "_blank");
+      window.open(savantURL, "_blank");
+    }
+
+    // Load top players into datalist for autocomplete
+    window.addEventListener('DOMContentLoaded', async () => {
+      try {
+        const response = await fetch('players.json');
+        const players = await response.json();
+        const datalist = document.getElementById('playerSuggestions');
+
+        players.forEach(player => {
+          const option = document.createElement('option');
+          option.value = player;
+          datalist.appendChild(option);
+        });
+
+        console.log('Player suggestions loaded.');
+      } catch (error) {
+        console.error('Could not load player suggestions:', error);
+      }
+    });
+  </script>
 </body>
 </html>
