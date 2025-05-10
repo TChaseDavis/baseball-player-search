@@ -5,11 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Baseball Player Search</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
       font-family: Arial, sans-serif;
-      padding: 2rem;
       background-color: #f8f9fa;
       color: #212529;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    main {
+      text-align: center;
+      padding: 2rem;
     }
 
     label {
@@ -47,6 +61,7 @@
       onkeydown="handleKey(event)"
     />
     <datalist id="playerSuggestions"></datalist>
+    <br />
     <button onclick="searchPlayer()" aria-label="Search player and open profiles">Search</button>
   </main>
 
@@ -71,7 +86,6 @@
       window.open(savantURL, "_blank");
     }
 
-    // Load top players into datalist for autocomplete
     window.addEventListener('DOMContentLoaded', async () => {
       try {
         const response = await fetch('players.json');
