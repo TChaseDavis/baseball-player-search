@@ -1,45 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Baseball Player Search</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 100px;
-    }
-    input {
-      padding: 10px;
-      width: 300px;
-      font-size: 16px;
-    }
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      margin-left: 10px;
-    }
-  </style>
-</head>
-<body>
-  <h1>Search Baseball Player</h1>
-  <input type="text" id="playerName" placeholder="Enter player name">
-  <button onclick="searchPlayer()">Search</button>
+<script>
+  async function searchPlayer() {
+    const nameInput = document.getElementById('playerName');
+    const playerName = nameInput.value.trim();
 
-  <script>
-    function searchPlayer() {
-      const name = document.getElementById('playerName').value.trim();
-      if (!name) return;
+    if (!playerName) return;
 
-      const encodedName = encodeURIComponent(name);
-      const urls = [
-        `https://www.baseball-reference.com/search/search.fcgi?search=${encodedName}`,
-        `https://www.fangraphs.com/search.aspx?search=${encodedName}`,
-        `https://baseballsavant.mlb.com/savant-search?searchTerm=${encodedName}`
-      ];
+    const encodedName = encodeURIComponent(playerName);
+    const brUrl = `https://www.baseball-reference.com/search/search.fcgi?search=${encodedName}`;
+    const fangraphsSearch = `https://www.google.com/search?q=site:fangraphs.com+${encodedName}`;
 
-      urls.forEach(url => window.open(url, '_blank'));
+    // Query the MLB Stats API
+    try {
+      const response = await fetch(`https://statsapi.mlb.com/api/v1/people/search?name=${encodedName}`);
+      const data = await response.json();
+
+      if (data.people && data.people.length > 0) {
+        const player = data.people[0];
+        const mlbId = player.id;
+        const slugName = player.fullName.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
+
+        const savantUrl = `https://baseballsavant.mlb.com/savant-player/${slugName}-${mlbId}`;
+
+        // Open all 3 tabs
+        window.open(brUrl, '_blank');
+        window.open(fangraphsSearch, '_blank');
+        window.open(savantUrl, '_blank');
+      } else {
+        alert('Player not found in MLB database.');
+      }
+    } catch (error) {
+      console.error('Error fetching MLB player data:', error);
+      alert('Something went wrong while fetching player data.');
     }
-  </script>
-</body>
-</html>
+  }
+</script>
