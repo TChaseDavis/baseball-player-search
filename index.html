@@ -80,29 +80,29 @@
   <footer role="contentinfo">
     Built with MLB Stats API, Baseball Savant, Fangraphs, and Baseball Reference
   </footer>
+<script>
+  window.addEventListener('DOMContentLoaded', async () => {
+    try {
+      const response = await fetch('players.json');
+      const players = await response.json();
 
-window.addEventListener('DOMContentLoaded', async () => {
-  try {
-    const response = await fetch('players.json');
-    const players = await response.json();
+      const datalist = document.getElementById('playerSuggestions');
+      if (!datalist) {
+        console.error('Datalist element not found.');
+        return;
+      }
 
-    const datalist = document.getElementById('playerSuggestions');
-    if (!datalist) {
-      console.error('Datalist element not found.');
-      return;
+      players.forEach(player => {
+        const option = document.createElement('option');
+        option.value = player;
+        datalist.appendChild(option);
+      });
+
+      console.log('Player suggestions loaded:', players);
+    } catch (error) {
+      console.error('Could not load player suggestions:', error);
     }
-
-    players.forEach(player => {
-      const option = document.createElement('option');
-      option.value = player;
-      datalist.appendChild(option);
-    });
-
-    console.log('Player suggestions loaded:', players);
-  } catch (error) {
-    console.error('Could not load player suggestions:', error);
-  }
-});
-  </script>
+  });
+</script>
 </body>
 </html>
