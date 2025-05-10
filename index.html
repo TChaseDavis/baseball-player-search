@@ -81,60 +81,24 @@
     Built with MLB Stats API, Baseball Savant, Fangraphs, and Baseball Reference
   </footer>
 
-  <script>
-    async function searchPlayer() {
-      const nameInput = document.getElementById('playerName');
-      const playerName = nameInput.value.trim();
-
-      if (!playerName) {
-        alert("Please enter a player's name.");
-        return;
-      }
-
-      const encodedName = encodeURIComponent(playerName);
-      const brUrl = `https://www.baseball-reference.com/search/search.fcgi?search=${encodedName}`;
-      const fangraphsUrl = `https://www.google.com/search?q=site:fangraphs.com+${encodedName}`;
-
-      try {
-        const response = await fetch(`https://statsapi.mlb.com/api/v1/people/search?name=${encodedName}`);
-        const data = await response.json();
-
-        if (data.people && data.people.length > 0) {
-          const player = data.people[0];
-          const mlbId = player.id;
-          const slugName = player.fullName.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
-
-          const savantUrl = `https://baseballsavant.mlb.com/savant-player/${slugName}-${mlbId}`;
-
-          // Open all three sites
-          window.open(brUrl, '_blank');
-          window.open(fangraphsUrl, '_blank');
-          window.open(savantUrl, '_blank');
-        } else {
-          alert('Player not found in MLB database.');
-        }
-      } catch (error) {
-        console.error('Error:', error);
-        alert('There was an error searching for the player.');
-      }
-    }
-
-    function handleKey(event) {
-      if (event.key === 'Enter') {
-        searchPlayer();
-      }
-    }// Load player suggestions on page load
 window.addEventListener('DOMContentLoaded', async () => {
   try {
     const response = await fetch('players.json');
     const players = await response.json();
 
     const datalist = document.getElementById('playerSuggestions');
+    if (!datalist) {
+      console.error('Datalist element not found.');
+      return;
+    }
+
     players.forEach(player => {
       const option = document.createElement('option');
       option.value = player;
       datalist.appendChild(option);
     });
+
+    console.log('Player suggestions loaded:', players);
   } catch (error) {
     console.error('Could not load player suggestions:', error);
   }
