@@ -2,120 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Baseball Player Search</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
       font-family: Arial, sans-serif;
-      background-color: #f8f9fa;
-      color: #212529;
+      background: #f4f4f4;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
     }
-
-    main {
+    .container {
       text-align: center;
-      padding: 2rem;
     }
-
-    label {
-      font-weight: bold;
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-
     input[type="text"] {
-      width: 100%;
-      max-width: 400px;
-      padding: 0.5rem;
-      font-size: 1rem;
-      margin-bottom: 1rem;
+      width: 300px;
+      padding: 10px;
+      font-size: 18px;
     }
-
     button {
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      cursor: pointer;
+      padding: 10px 15px;
+      font-size: 18px;
+      margin-left: 10px;
+    }
+    datalist option {
+      font-size: 16px;
     }
   </style>
 </head>
 <body>
-  <main>
-    <h1>Baseball Player Search</h1>
-    <label for="playerName" id="playerLabel">Search for a player:</label>
-    <input
-      type="text"
-      id="playerName"
-      name="playerName"
-      list="playerSuggestions"
-      placeholder="Enter player name"
-      aria-labelledby="playerLabel"
-      onkeydown="handleKey(event)"
-    />
-    <datalist id="playerSuggestions"></datalist>
-    <br />
-    <button onclick="searchPlayer()" aria-label="Search player and open profiles">Search</button>
-  </main>
+  <div class="container">
+    <label for="playerName" id="searchLabel">Search for a Baseball Player:</label><br>
+    <input list="playerList" id="playerName" name="playerName" aria-labelledby="searchLabel" placeholder="Enter player name..." autocomplete="off" />
+    <datalist id="playerList"></datalist>
+    <button onclick="searchPlayer()">Search</button>
+  </div>
 
   <script>
-    function handleKey(event) {
-      if (event.key === 'Enter') {
-        searchPlayer();
-      }
-    }
+    let players = [];
 
-   function searchPlayer() {
-  const nameInput = document.getElementById("playerName").value.trim();
-  if (!nameInput) return;
-
-  const player = players.find(p => p.name.toLowerCase() === nameInput.toLowerCase());
-  if (!player) {
-    alert("Player not found in database.");
-    return;
-  }
-
-  const encodedName = encodeURIComponent(player.name);
-  const nameSlug = player.name
-  .toLowerCase()
-  .replace(/\./g, "")      // remove periods
-  .replace(/[^a-z0-9 ]/g, "") // remove special characters
-  .replace(/ /g, "-");     // replace spaces with dashes
-
-  const referenceURL = `https://www.baseball-reference.com/search/search.fcgi?search=${encodedName}`;
-  const fangraphsURL = `https://www.fangraphs.com/players/${nameSlug}/${player.fangraphs_id}/stats`;
-  const savantURL = `https://baseballsavant.mlb.com/savant-player/${nameSlug}-${player.savant_id}`;
-
-
-  window.open(referenceURL, "_blank");
-  window.open(fangraphsURL, "_blank");
-  window.open(savantURL, "_blank");
-}
-
-    window.addEventListener('DOMContentLoaded', async () => {
-      try {
-        const response = await fetch("players.json");
-        const players = await response.json();
-        const datalist = document.getElementById('playerSuggestions');
-
+    // Load the player data from players.json
+    fetch('players.json')
+      .then(response => response.json())
+      .then(data => {
+        players = data;
+        const datalist = document.getElementById("playerList");
         players.forEach(player => {
-          const option = document.createElement('option');
-          option.value = player;
+          const option = document.createElement("option");
+          option.value = player.name;
           datalist.appendChild(option);
         });
+        console.log("Player list loaded.");
+      })
+      .catch(err => {
+        console.error("Error loading players.json", err);
+        alert("Could not load player list.");
+      });
 
-        console.log('Player suggestions loaded.');
-      } catch (error) {
-        console.error('Could not load player suggestions:', error);
+    function searchPlayer() {
+      const nameInput = document.getElementById("playerName").value.trim();
+      if (!nameInput) return;
+
+      const player = players.find(p => p.name.toLowerCase() === nameInput.toLowerCase());
+      if (!player) {
+        alert("Player not found in database.");
+        return;
       }
-    });
+
+      const nameSlug = player.name
+        .toLowerCase()
+        .replace(/\./g, "")               // remove periods
+        .replace(/[^a-z0-9 ]/g, "")       // remove special characters
+        .replace(/ /g, "-");              // replace spaces with dashes
+
+      const encodedName = encodeURIComponent(player.name);
+      const referenceURL = `https://www.baseball-reference.com/search/search.fcgi?search=${encodedName}`;
+      const fangraphsURL = `https://www.fangraphs.com/players/${nameSlug}/${player.fangraphs_id}/stats`;
+      const savantURL = `https://baseballsavant.mlb.com/savant-player/${nameSlug}-${player.savant_id}`;
+
+      window.open(referenceURL, '_blank');
+      window.open(fangraphsURL, '_blank');
+      window.open(savantURL, '_blank');
+    }
   </script>
 </body>
 </html>
