@@ -43,23 +43,23 @@
   <script>
     let players = [];
 
-    // Load the player data from players.json
-    fetch("players.json")
-      .then(response => response.json())
-      .then(data => {
-        players = data;
-        const datalist = document.getElementById("playerList");
-        players.forEach(player => {
-          const option = document.createElement("option");
-          option.value = player.name;
-          datalist.appendChild(option);
-        });
-        console.log("Player list loaded.");
-      })
-      .catch(err => {
-        console.error("Error loading players.json", err);
-        alert("Could not load player list.");
-      });
+// Load the player data from players.json
+fetch('players.json')
+  .then(response => response.json())
+  .then(data => {
+    players = data;
+    const datalist = document.getElementById("playerList");
+    players.forEach(player => {
+      const option = document.createElement("option");
+      option.value = player.name;  // Fix: use player.name, not player
+      datalist.appendChild(option);
+    });
+    console.log("Player list loaded.");
+  })
+  .catch(err => {
+    console.error("Error loading players.json", err);
+    alert("Could not load player list.");
+  });
 
     function searchPlayer() {
       const nameInput = document.getElementById("playerName").value.trim();
