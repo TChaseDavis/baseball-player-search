@@ -96,7 +96,7 @@
 
     window.addEventListener('DOMContentLoaded', async () => {
       try {
-        const response = await fetch('players.json');
+        const response = await fetch("players.json");
         const players = await response.json();
         const datalist = document.getElementById('playerSuggestions');
 
