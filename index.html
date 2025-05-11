@@ -72,19 +72,27 @@
       }
     }
 
-    function searchPlayer() {
-      const name = document.getElementById("playerName").value.trim();
-      if (!name) return;
+   function searchPlayer() {
+  const nameInput = document.getElementById("playerName").value.trim();
+  if (!nameInput) return;
 
-      const encodedName = encodeURIComponent(name);
-      const referenceURL = `https://www.baseball-reference.com/search/search.fcgi?search=${encodedName}`;
-      const fangraphsURL = `https://www.fangraphs.com/players.aspx?search=${encodedName}`;
-      const savantURL = `https://baseballsavant.mlb.com/savant-search?search=${encodedName}`;
+  const player = players.find(p => p.name.toLowerCase() === nameInput.toLowerCase());
+  if (!player) {
+    alert("Player not found in database.");
+    return;
+  }
 
-      window.open(referenceURL, "_blank");
-      window.open(fangraphsURL, "_blank");
-      window.open(savantURL, "_blank");
-    }
+  const encodedName = encodeURIComponent(player.name);
+  const nameSlug = player.name.toLowerCase().replace(/ /g, "-");
+
+  const referenceURL = `https://www.baseball-reference.com/search/search.fcgi?search=${encodedName}`;
+  const fangraphsURL = `https://www.fangraphs.com/players/${nameSlug}/${player.fangraphs_id}/stats`;
+  const savantURL = `https://baseballsavant.mlb.com/savant-player/${nameSlug}-${player.savant_id}`;
+
+  window.open(referenceURL, "_blank");
+  window.open(fangraphsURL, "_blank");
+  window.open(savantURL, "_blank");
+}
 
     window.addEventListener('DOMContentLoaded', async () => {
       try {
