@@ -83,11 +83,16 @@
   }
 
   const encodedName = encodeURIComponent(player.name);
-  const nameSlug = player.name.toLowerCase().replace(/ /g, "-");
+  const nameSlug = player.name
+  .toLowerCase()
+  .replace(/\./g, "")      // remove periods
+  .replace(/[^a-z0-9 ]/g, "") // remove special characters
+  .replace(/ /g, "-");     // replace spaces with dashes
 
   const referenceURL = `https://www.baseball-reference.com/search/search.fcgi?search=${encodedName}`;
   const fangraphsURL = `https://www.fangraphs.com/players/${nameSlug}/${player.fangraphs_id}/stats`;
   const savantURL = `https://baseballsavant.mlb.com/savant-player/${nameSlug}-${player.savant_id}`;
+
 
   window.open(referenceURL, "_blank");
   window.open(fangraphsURL, "_blank");
