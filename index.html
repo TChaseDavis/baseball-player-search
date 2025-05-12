@@ -78,13 +78,13 @@ fetch('players.json')
         .replace(/ /g, "-");              // replace spaces with dashes
 
       const encodedName = encodeURIComponent(player.name);
-      const referenceURL = `https://www.baseball-reference.com/search/search.fcgi?search=${encodedName}`;
-      const fangraphsURL = `https://www.fangraphs.com/players/${nameSlug}/${player.fangraphs_id}/stats`;
       const savantURL = `https://baseballsavant.mlb.com/savant-player/${nameSlug}-${player.savant_id}`;
+      const fangraphsURL = `https://www.fangraphs.com/players/${nameSlug}/${player.fangraphs_id}/stats`;
+      const referenceURL = `https://www.baseball-reference.com/search/search.fcgi?search=${encodedName}`;
 
-      window.open(referenceURL, '_blank');
-      window.open(fangraphsURL, '_blank');
       window.open(savantURL, '_blank');
+      window.open(fangraphsURL, '_blank');
+      window.open(referenceURL, '_blank');
     }
   </script>
 </body>
