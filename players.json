@@ -1,502 +1,1002 @@
 [
- {
-   "name": "Shohei Ohtani",
-   "fangraphs_id": "19755",
-   "savant_id": "660271"
- },
- {
-   "name": "Bobby Witt Jr.",
-   "fangraphs_id": "25764",
-   "savant_id": "677951"
- },
- {
-   "name": "Aaron Judge",
-   "fangraphs_id": "15640",
-   "savant_id": "592450"
- },
- {
-   "name": "Elly De La Cruz",
-   "fangraphs_id": "26668",
-   "savant_id": "682829"
- },
- {
-   "name": "Kyle Tucker",
-   "fangraphs_id": "18345",
-   "savant_id": "663656"
- },
- {
-   "name": "Jose Ramirez",
-   "fangraphs_id": "13510",
-   "savant_id": "608070"
- },
- {
-   "name": "Juan Soto",
-   "fangraphs_id": "20123",
-   "savant_id": "665742"
- },
- {
-   "name": "Corbin Carroll",
-   "fangraphs_id": "25878",
-   "savant_id": "682998"
- },
- {
-   "name": "Fernando Tatis Jr.",
-   "fangraphs_id": "19709",
-   "savant_id": "665487"
- },
- {
-   "name": "Gunnar Henderson",
-   "fangraphs_id": "26289",
-   "savant_id": "683002"
- },
- {
-   "name": "Mookie Betts",
-   "fangraphs_id": "13611",
-   "savant_id": "605141"
- },
- {
-   "name": "Vladimir Guerrero Jr.",
-   "fangraphs_id": "19611",
-   "savant_id": "665489"
- },
- {
-   "name": "Paul Skenes",
-   "fangraphs_id": "33677",
-   "savant_id": "694973"
- },
- {
-   "name": "Tarik Skubal",
-   "fangraphs_id": "22267",
-   "savant_id": "669373"
- },
- {
-   "name": "Francisco Lindor",
-   "fangraphs_id": "12916",
-   "savant_id": "596019"
- },
- {
-   "name": "Julio Rodriguez",
-   "fangraphs_id": "23697",
-   "savant_id": "677594"
- },
- {
-   "name": "Jackson Chourio",
-   "fangraphs_id": "28806",
-   "savant_id": "694192"
- },
- {
-   "name": "Bryce Harper",
-   "fangraphs_id": "11579",
-   "savant_id": "547180"
- },
- {
-   "name": "Yordan Alvarez",
-   "fangraphs_id": "19556",
-   "savant_id": "670541"
- },
- {
-   "name": "Jarren Duran",
-   "fangraphs_id": "24617",
-   "savant_id": "680776"
- },
- {
-   "name": "Oneil Cruz",
-   "fangraphs_id": "21711",
-   "savant_id": "665833"
- },
- {
-   "name": "Zack Wheeler",
-   "fangraphs_id": "10310",
-   "savant_id": "554430"
- },
- {
-   "name": "Garrett Crochet",
-   "fangraphs_id": "27463",
-   "savant_id": "676979"
- },
- {
-   "name": "Austin Riley",
-   "fangraphs_id": "18360",
-   "savant_id": "663586"
- },
- {
-   "name": "Trea Turner",
-   "fangraphs_id": "16252",
-   "savant_id": "607208"
- },
- {
-   "name": "Freddie Freeman",
-   "fangraphs_id": "5361",
-   "savant_id": "518692"
- },
- {
-   "name": "Jackson Merrill",
-   "fangraphs_id": "29490",
-   "savant_id": "701538"
- },
- {
-   "name": "Manny Machado",
-   "fangraphs_id": "11493",
-   "savant_id": "592518"
- },
- {
-   "name": "Pete Alonso",
-   "fangraphs_id": "19251",
-   "savant_id": "624413"
- },
- {
-   "name": "Matt Olson",
-   "fangraphs_id": "14344",
-   "savant_id": "621566"
- },
- {
-   "name": "Ozzie Albies",
-   "fangraphs_id": "16556",
-   "savant_id": "645277"
- },
- {
-   "name": "Cole Ragans",
-   "fangraphs_id": "21846",
-   "savant_id": "666142"
- },
- {
-   "name": "Rafael Devers",
-   "fangraphs_id": "17350",
-   "savant_id": "646240"
- },
- {
-   "name": "Chris Sale",
-   "fangraphs_id": "10603",
-   "savant_id": "519242"
- },
- {
-   "name": "Ronald Acuna",
-   "fangraphs_id": "18401",
-   "savant_id": "660670"
- },
- {
-   "name": "Jose Altuve",
-   "fangraphs_id": "5417",
-   "savant_id": "514888"
- },
- {
-   "name": "Ketel Marte",
-   "fangraphs_id": "13613",
-   "savant_id": "606466"
- },
- {
-   "name": "Corey Seager",
-   "fangraphs_id": "13624",
-   "savant_id": "608369"
- },
- {
-   "name": "James Wood",
-   "fangraphs_id": "29518",
-   "savant_id": "695578"
- },
- {
-   "name": "Dylan Cease",
-   "fangraphs_id": "18525",
-   "savant_id": "656302"
- },
- {
-   "name": "Yoshinobu Yamamoto",
-   "fangraphs_id": "33825",
-   "savant_id": "808967"
- },
- {
-   "name": "Kyle Schwarber",
-   "fangraphs_id": "16478",
-   "savant_id": "656941"
- },
- {
-   "name": "Alex Bregman",
-   "fangraphs_id": "17678",
-   "savant_id": "608324"
- },
- {
-   "name": "Michael King",
-   "fangraphs_id": "19853",
-   "savant_id": "650633"
- },
- {
-   "name": "Wyatt Langford",
-   "fangraphs_id": "33333",
-   "savant_id": "694671"
- },
- {
-   "name": "Mason Miller",
-   "fangraphs_id": "31757",
-   "savant_id": "695243"
- },
- {
-   "name": "Jacob deGrom",
-   "fangraphs_id": "10954",
-   "savant_id": "594798"
- },
- {
-   "name": "William Contreras",
-   "fangraphs_id": "20503",
-   "savant_id": "661388"
- },
- {
-   "name": "CJ Abrams",
-   "fangraphs_id": "25768",
-   "savant_id": "682928"
- },
- {
-   "name": "Josh Hader",
-   "fangraphs_id": "14212",
-   "savant_id": "623352"
- },
- {
-   "name": "Framber Valdez",
-   "fangraphs_id": "17295",
-   "savant_id": "664285"
- },
- {
-   "name": "Spencer Schwellenbach",
-   "fangraphs_id": "31846",
-   "savant_id": "680885"
- },
- {
-   "name": "Brent Rooker",
-   "fangraphs_id": "19627",
-   "savant_id": "667670"
- },
- {
-   "name": "Teoscar Hernandez",
-   "fangraphs_id": "13066",
-   "savant_id": "606192"
- },
- {
-   "name": "Emmanuel Clase",
-   "fangraphs_id": "21032",
-   "savant_id": "661403"
- },
- {
-   "name": "Corbin Burnes",
-   "fangraphs_id": "19361",
-   "savant_id": "669203"
- },
- {
-   "name": "Michael Harris",
-   "fangraphs_id": "25931",
-   "savant_id": "671739"
- },
- {
-   "name": "Logan Webb",
-   "fangraphs_id": "17995",
-   "savant_id": "657277"
- },
- {
-   "name": "Edwin Diaz",
-   "fangraphs_id": "14710",
-   "savant_id": "621242"
- },
- {
-   "name": "Lawrence Butler",
-   "fangraphs_id": "22542",
-   "savant_id": "671732"
- },
- {
-   "name": "Spencer Strider",
-   "fangraphs_id": "27498",
-   "savant_id": "675911"
- },
- {
-   "name": "Andres Munoz",
-   "fangraphs_id": "20373",
-   "savant_id": "662253"
- },
- {
-   "name": "Logan Gilbert",
-   "fangraphs_id": "22250",
-   "savant_id": "669302"
- },
- {
-   "name": "Josh Naylor",
-   "fangraphs_id": "18839",
-   "savant_id": "647304"
- },
- {
-   "name": "Marcell Ozuna",
-   "fangraphs_id": "10324",
-   "savant_id": "542303"
- },
- {
-   "name": "Hunter Greene",
-   "fangraphs_id": "22182",
-   "savant_id": "668881"
- },
- {
-   "name": "Hunter Brown",
-   "fangraphs_id": "25880",
-   "savant_id": "686613"
- },
- {
-   "name": "Pablo Lopez",
-   "fangraphs_id": "17085",
-   "savant_id": "641154"
- },
- {
-   "name": "Jazz Chisholm",
-   "fangraphs_id": "20454",
-   "savant_id": "665862"
- },
- {
-   "name": "Cal Raleigh",
-   "fangraphs_id": "21534",
-   "savant_id": "663728"
- },
- {
-   "name": "Raisel Iglesias",
-   "fangraphs_id": "17130",
-   "savant_id": "628452"
- },
- {
-   "name": "Junior Caminero",
-   "fangraphs_id": "28163",
-   "savant_id": "691406"
- },
- {
-   "name": "Max Fried",
-   "fangraphs_id": "13743",
-   "savant_id": "608331"
- },
- {
-   "name": "Anthony Santander",
-   "fangraphs_id": "14551",
-   "savant_id": "623993"
- },
- {
-   "name": "Shota Imanaga",
-   "fangraphs_id": "33829",
-   "savant_id": "684007"
- },
- {
-   "name": "Freddy Peralta",
-   "fangraphs_id": "18679",
-   "savant_id": "642547"
- },
- {
-   "name": "Willy Adames",
-   "fangraphs_id": "15986",
-   "savant_id": "642715"
- },
- {
-   "name": "Pete Crow-Armstrong",
-   "fangraphs_id": "27769",
-   "savant_id": "691718"
- },
- {
-   "name": "Ryan Helsley",
-   "fangraphs_id": "18138",
-   "savant_id": "664854"
- },
- {
-   "name": "Robert Suarez",
-   "fangraphs_id": "30115",
-   "savant_id": "663158"
- },
- {
-   "name": "Adley Rutschman",
-   "fangraphs_id": "26288",
-   "savant_id": "668939"
- },
- {
-   "name": "Bryan Reynolds",
-   "fangraphs_id": "19326",
-   "savant_id": "668804"
- },
- {
-   "name": "Joe Ryan",
-   "fangraphs_id": "21390",
-   "savant_id": "657746"
- },
- {
-   "name": "Brenton Doyle",
-   "fangraphs_id": "25479",
-   "savant_id": "686668"
- },
- {
-   "name": "Tanner Bibee",
-   "fangraphs_id": "30134",
-   "savant_id": "676440"
- },
- {
-   "name": "Cody Bellinger",
-   "fangraphs_id": "15998",
-   "savant_id": "641355"
- },
- {
-   "name": "Seiya Suzuki",
-   "fangraphs_id": "30116",
-   "savant_id": "673548"
- },
- {
-   "name": "Salvador Perez",
-   "fangraphs_id": "7304",
-   "savant_id": "521692"
- },
- {
-   "name": "Christian Walker",
-   "fangraphs_id": "13419",
-   "savant_id": "572233"
- },
- {
-   "name": "Bo Bichette",
-   "fangraphs_id": "19612",
-   "savant_id": "666182"
- },
- {
-   "name": "Matt Chapman",
-   "fangraphs_id": "16505",
-   "savant_id": "656305"
- },
- {
-   "name": "Aaron Nola",
-   "fangraphs_id": "16149",
-   "savant_id": "605400"
- },
- {
-   "name": "Tanner Scott",
-   "fangraphs_id": "17586",
-   "savant_id": "656945"
- },
- {
-   "name": "Marcus Semien",
-   "fangraphs_id": "12533",
-   "savant_id": "543760"
- },
- {
-   "name": "Luis Robert Jr.",
-   "fangraphs_id": "20043",
-   "savant_id": "673357"
- },
- {
-   "name": "Jhoan Duran",
-   "fangraphs_id": "21029",
-   "savant_id": "661395"
- },
- {
-   "name": "Zac Gallen",
-   "fangraphs_id": "19291",
-   "savant_id": "668678"
- },
- {
-   "name": "Christian Yelich",
-   "fangraphs_id": "11477",
-   "savant_id": "592885"
- },
- {
-   "name": "Mike Trout",
-   "fangraphs_id": "10155",
-   "savant_id": "545361"
- },
- {
-   "name": "Matt McLain",
-   "fangraphs_id": "29695",
-   "savant_id": "680574"
- }
+  {
+    "name": "  Aaron Judge",
+    "fangraphs_id": "15640",
+    "savant_id": "592450"
+  },
+  {
+    "name": "  Aaron Nola",
+    "fangraphs_id": "16149",
+    "savant_id": "605400"
+  },
+  {
+    "name": "  Adley Rutschman",
+    "fangraphs_id": "26288",
+    "savant_id": "668939"
+  },
+  {
+    "name": "  Alex Bregman",
+    "fangraphs_id": "17678",
+    "savant_id": "608324"
+  },
+  {
+    "name": "  Andres Munoz",
+    "fangraphs_id": "20373",
+    "savant_id": "662253"
+  },
+  {
+    "name": "  Anthony Santander",
+    "fangraphs_id": "14551",
+    "savant_id": "623993"
+  },
+  {
+    "name": "  Austin Riley",
+    "fangraphs_id": "18360",
+    "savant_id": "663586"
+  },
+  {
+    "name": "  Bo Bichette",
+    "fangraphs_id": "19612",
+    "savant_id": "666182"
+  },
+  {
+    "name": "  Bobby Witt Jr.",
+    "fangraphs_id": "25764",
+    "savant_id": "677951"
+  },
+  {
+    "name": "  Brent Rooker",
+    "fangraphs_id": "19627",
+    "savant_id": "667670"
+  },
+  {
+    "name": "  Brenton Doyle",
+    "fangraphs_id": "25479",
+    "savant_id": "686668"
+  },
+  {
+    "name": "  Bryan Reynolds",
+    "fangraphs_id": "19326",
+    "savant_id": "668804"
+  },
+  {
+    "name": "  Bryce Harper",
+    "fangraphs_id": "11579",
+    "savant_id": "547180"
+  },
+  {
+    "name": "  Cal Raleigh",
+    "fangraphs_id": "21534",
+    "savant_id": "663728"
+  },
+  {
+    "name": "  Chris Sale",
+    "fangraphs_id": "10603",
+    "savant_id": "519242"
+  },
+  {
+    "name": "  Christian Walker",
+    "fangraphs_id": "13419",
+    "savant_id": "572233"
+  },
+  {
+    "name": "  Christian Yelich",
+    "fangraphs_id": "11477",
+    "savant_id": "592885"
+  },
+  {
+    "name": "  CJ Abrams",
+    "fangraphs_id": "25768",
+    "savant_id": "682928"
+  },
+  {
+    "name": "  Cody Bellinger",
+    "fangraphs_id": "15998",
+    "savant_id": "641355"
+  },
+  {
+    "name": "  Cole Ragans",
+    "fangraphs_id": "21846",
+    "savant_id": "666142"
+  },
+  {
+    "name": "  Corbin Burnes",
+    "fangraphs_id": "19361",
+    "savant_id": "669203"
+  },
+  {
+    "name": "  Corbin Carroll",
+    "fangraphs_id": "25878",
+    "savant_id": "682998"
+  },
+  {
+    "name": "  Corey Seager",
+    "fangraphs_id": "13624",
+    "savant_id": "608369"
+  },
+  {
+    "name": "  Dylan Cease",
+    "fangraphs_id": "18525",
+    "savant_id": "656302"
+  },
+  {
+    "name": "  Edwin Diaz",
+    "fangraphs_id": "14710",
+    "savant_id": "621242"
+  },
+  {
+    "name": "  Elly De La Cruz",
+    "fangraphs_id": "26668",
+    "savant_id": "682829"
+  },
+  {
+    "name": "  Emmanuel Clase",
+    "fangraphs_id": "21032",
+    "savant_id": "661403"
+  },
+  {
+    "name": "  Fernando Tatis Jr.",
+    "fangraphs_id": "19709",
+    "savant_id": "665487"
+  },
+  {
+    "name": "  Framber Valdez ",
+    "fangraphs_id": "17295",
+    "savant_id": "664285"
+  },
+  {
+    "name": "  Francisco Lindor",
+    "fangraphs_id": "12916",
+    "savant_id": "596019"
+  },
+  {
+    "name": "  Freddie Freeman",
+    "fangraphs_id": "5361",
+    "savant_id": "518692"
+  },
+  {
+    "name": "  Freddy Peralta",
+    "fangraphs_id": "18679",
+    "savant_id": "642547"
+  },
+  {
+    "name": "  Garrett Crochet",
+    "fangraphs_id": "27463",
+    "savant_id": "676979"
+  },
+  {
+    "name": "  Gunnar Henderson",
+    "fangraphs_id": "26289",
+    "savant_id": "683002"
+  },
+  {
+    "name": "  Hunter Brown",
+    "fangraphs_id": "25880",
+    "savant_id": "686613"
+  },
+  {
+    "name": "  Hunter Greene",
+    "fangraphs_id": "22182",
+    "savant_id": "668881"
+  },
+  {
+    "name": "  Jackson Chourio",
+    "fangraphs_id": "28806",
+    "savant_id": "694192"
+  },
+  {
+    "name": "  Jackson Merrill",
+    "fangraphs_id": "29490",
+    "savant_id": "701538"
+  },
+  {
+    "name": "  Jacob deGrom",
+    "fangraphs_id": "10954",
+    "savant_id": "594798"
+  },
+  {
+    "name": "  James Wood",
+    "fangraphs_id": "29518",
+    "savant_id": "695578"
+  },
+  {
+    "name": "  Jarren Duran",
+    "fangraphs_id": "24617",
+    "savant_id": "680776"
+  },
+  {
+    "name": "  Jazz Chisholm",
+    "fangraphs_id": "20454",
+    "savant_id": "665862"
+  },
+  {
+    "name": "  Jhoan Duran",
+    "fangraphs_id": "21029",
+    "savant_id": "661395"
+  },
+  {
+    "name": "  Joe Ryan",
+    "fangraphs_id": "21390",
+    "savant_id": "657746"
+  },
+  {
+    "name": "  Jose Altuve",
+    "fangraphs_id": "5417",
+    "savant_id": "514888"
+  },
+  {
+    "name": "  Jose Ramirez",
+    "fangraphs_id": "13510",
+    "savant_id": "608070"
+  },
+  {
+    "name": "  Josh Hader",
+    "fangraphs_id": "14212",
+    "savant_id": "623352"
+  },
+  {
+    "name": "  Josh Naylor",
+    "fangraphs_id": "18839",
+    "savant_id": "647304"
+  },
+  {
+    "name": "  Juan Soto",
+    "fangraphs_id": "20123",
+    "savant_id": "665742"
+  },
+  {
+    "name": "  Julio Rodriguez",
+    "fangraphs_id": "23697",
+    "savant_id": "677594"
+  },
+  {
+    "name": "  Junior Caminero",
+    "fangraphs_id": "28163",
+    "savant_id": "691406"
+  },
+  {
+    "name": "  Ketel Marte",
+    "fangraphs_id": "13613",
+    "savant_id": "606466"
+  },
+  {
+    "name": "  Kyle Schwarber",
+    "fangraphs_id": "16478",
+    "savant_id": "656941"
+  },
+  {
+    "name": "  Kyle Tucker",
+    "fangraphs_id": "18345",
+    "savant_id": "663656"
+  },
+  {
+    "name": "  Lawrence Butler",
+    "fangraphs_id": "22542",
+    "savant_id": "671732"
+  },
+  {
+    "name": "  Logan Gilbert",
+    "fangraphs_id": "22250",
+    "savant_id": "669302"
+  },
+  {
+    "name": "  Logan Webb",
+    "fangraphs_id": "17995",
+    "savant_id": "657277"
+  },
+  {
+    "name": "  Luis Robert Jr.",
+    "fangraphs_id": "20043",
+    "savant_id": "673357"
+  },
+  {
+    "name": "  Manny Machado",
+    "fangraphs_id": "11493",
+    "savant_id": "592518"
+  },
+  {
+    "name": "  Marcell Ozuna",
+    "fangraphs_id": "10324",
+    "savant_id": "542303"
+  },
+  {
+    "name": "  Marcus Semien",
+    "fangraphs_id": "12533",
+    "savant_id": "543760"
+  },
+  {
+    "name": "  Mason Miller",
+    "fangraphs_id": "31757",
+    "savant_id": "695243"
+  },
+  {
+    "name": "  Matt Chapman",
+    "fangraphs_id": "16505",
+    "savant_id": "656305"
+  },
+  {
+    "name": "  Matt McLain",
+    "fangraphs_id": "29695",
+    "savant_id": "680574"
+  },
+  {
+    "name": "  Matt Olson",
+    "fangraphs_id": "14344",
+    "savant_id": "621566"
+  },
+  {
+    "name": "  Max Fried",
+    "fangraphs_id": "13743",
+    "savant_id": "608331"
+  },
+  {
+    "name": "  Michael Harris",
+    "fangraphs_id": "25931",
+    "savant_id": "671739"
+  },
+  {
+    "name": "  Michael King",
+    "fangraphs_id": "19853",
+    "savant_id": "650633"
+  },
+  {
+    "name": "  Mike Trout",
+    "fangraphs_id": "10155",
+    "savant_id": "545361"
+  },
+  {
+    "name": "  Mookie Betts",
+    "fangraphs_id": "13611",
+    "savant_id": "605141"
+  },
+  {
+    "name": "  Oneil Cruz",
+    "fangraphs_id": "21711",
+    "savant_id": "665833"
+  },
+  {
+    "name": "  Ozzie Albies",
+    "fangraphs_id": "16556",
+    "savant_id": "645277"
+  },
+  {
+    "name": "  Pablo Lopez",
+    "fangraphs_id": "17085",
+    "savant_id": "641154"
+  },
+  {
+    "name": "  Paul Skenes",
+    "fangraphs_id": "33677",
+    "savant_id": "694973"
+  },
+  {
+    "name": "  Pete Alonso",
+    "fangraphs_id": "19251",
+    "savant_id": "624413"
+  },
+  {
+    "name": "  Pete Crow-Armstrong",
+    "fangraphs_id": "27769",
+    "savant_id": "691718"
+  },
+  {
+    "name": "  Rafael Devers",
+    "fangraphs_id": "17350",
+    "savant_id": "646240"
+  },
+  {
+    "name": "  Raisel Iglesias",
+    "fangraphs_id": "17130",
+    "savant_id": "628452"
+  },
+  {
+    "name": "  Robert Suarez",
+    "fangraphs_id": "30115",
+    "savant_id": "663158"
+  },
+  {
+    "name": "  Ronald Acuna",
+    "fangraphs_id": "18401",
+    "savant_id": "660670"
+  },
+  {
+    "name": "  Ryan Helsley",
+    "fangraphs_id": "18138",
+    "savant_id": "664854"
+  },
+  {
+    "name": "  Salvador Perez",
+    "fangraphs_id": "7304",
+    "savant_id": "521692"
+  },
+  {
+    "name": "  Seiya Suzuki",
+    "fangraphs_id": "30116",
+    "savant_id": "673548"
+  },
+  {
+    "name": "  Shota Imanaga",
+    "fangraphs_id": "33829",
+    "savant_id": "684007"
+  },
+  {
+    "name": "  Spencer Schwellenbach",
+    "fangraphs_id": "31846",
+    "savant_id": "680885"
+  },
+  {
+    "name": "  Spencer Strider",
+    "fangraphs_id": "27498",
+    "savant_id": "675911"
+  },
+  {
+    "name": "  Tanner Bibee",
+    "fangraphs_id": "30134",
+    "savant_id": "676440"
+  },
+  {
+    "name": "  Tanner Scott",
+    "fangraphs_id": "17586",
+    "savant_id": "656945"
+  },
+  {
+    "name": "  Tarik Skubal",
+    "fangraphs_id": "22267",
+    "savant_id": "669373"
+  },
+  {
+    "name": "  Teoscar Hernandez",
+    "fangraphs_id": "13066",
+    "savant_id": "606192"
+  },
+  {
+    "name": "  Trea Turner",
+    "fangraphs_id": "16252",
+    "savant_id": "607208"
+  },
+  {
+    "name": "  Vladimir Guerrero Jr.",
+    "fangraphs_id": "19611",
+    "savant_id": "665489"
+  },
+  {
+    "name": "  William Contreras",
+    "fangraphs_id": "20503",
+    "savant_id": "661388"
+  },
+  {
+    "name": "  Willy Adames",
+    "fangraphs_id": "15986",
+    "savant_id": "642715"
+  },
+  {
+    "name": "  Wyatt Langford",
+    "fangraphs_id": "33333",
+    "savant_id": "694671"
+  },
+  {
+    "name": "  Yordan Alvarez",
+    "fangraphs_id": "19556",
+    "savant_id": "670541"
+  },
+  {
+    "name": "  Yoshinobu Yamamoto",
+    "fangraphs_id": "33825",
+    "savant_id": "808967"
+  },
+  {
+    "name": "  Zac Gallen",
+    "fangraphs_id": "19291",
+    "savant_id": "668678"
+  },
+  {
+    "name": "  Zack Wheeler",
+    "fangraphs_id": "10310",
+    "savant_id": "554430"
+  },
+  {
+    "name": "Aaron Nola",
+    "fangraphs_id": "16149",
+    "savant_id": "605400"
+  },
+  {
+    "name": "Adolis Garcia",
+    "fangraphs_id": "19287",
+    "savant_id": "666969"
+  },
+  {
+    "name": "Alec Bohm",
+    "fangraphs_id": "21618",
+    "savant_id": "664761"
+  },
+  {
+    "name": "Andres Gimenez",
+    "fangraphs_id": "19950",
+    "savant_id": "665926"
+  },
+  {
+    "name": "Anthony Volpe",
+    "fangraphs_id": "27647",
+    "savant_id": "683011"
+  },
+  {
+    "name": "Austin Wells",
+    "fangraphs_id": "27562",
+    "savant_id": "669224"
+  },
+  {
+    "name": "Bailey Ober",
+    "fangraphs_id": "21224",
+    "savant_id": "641927"
+  },
+  {
+    "name": "Ben Rice",
+    "fangraphs_id": "28576",
+    "savant_id": "700250"
+  },
+  {
+    "name": "Blake Snell",
+    "fangraphs_id": "13543",
+    "savant_id": "605483"
+  },
+  {
+    "name": "Brandon Lowe",
+    "fangraphs_id": "18882",
+    "savant_id": "664040"
+  },
+  {
+    "name": "Brandon Nimmo",
+    "fangraphs_id": "12927",
+    "savant_id": "607043"
+  },
+  {
+    "name": "Brandon Pfaadt",
+    "fangraphs_id": "27782",
+    "savant_id": "694297"
+  },
+  {
+    "name": "Brice Turang",
+    "fangraphs_id": "22186",
+    "savant_id": "668930"
+  },
+  {
+    "name": "Bryan Woo",
+    "fangraphs_id": "30279",
+    "savant_id": "693433"
+  },
+  {
+    "name": "Bryce Miller",
+    "fangraphs_id": "29837",
+    "savant_id": "682243"
+  },
+  {
+    "name": "Bryson Stott",
+    "fangraphs_id": "26294",
+    "savant_id": "681082"
+  },
+  {
+    "name": "Byron Buxton",
+    "fangraphs_id": "14161",
+    "savant_id": "621439"
+  },
+  {
+    "name": "Carlos Rodon",
+    "fangraphs_id": "16137",
+    "savant_id": "607074"
+  },
+  {
+    "name": "Cedric Mullins",
+    "fangraphs_id": "17929",
+    "savant_id": "656775"
+  },
+  {
+    "name": "Chandler Simpson",
+    "fangraphs_id": "31912",
+    "savant_id": "802415"
+  },
+  {
+    "name": "Cristopher Sanchez",
+    "fangraphs_id": "20778",
+    "savant_id": "650911"
+  },
+  {
+    "name": "Dansby Swanson",
+    "fangraphs_id": "18314",
+    "savant_id": "621020"
+  },
+  {
+    "name": "Devin Williams",
+    "fangraphs_id": "15816",
+    "savant_id": "642207"
+  },
+  {
+    "name": "Dylan Crews",
+    "fangraphs_id": "33541",
+    "savant_id": "686611"
+  },
+  {
+    "name": "Eugenio Suarez",
+    "fangraphs_id": "12552",
+    "savant_id": "553993"
+  },
+  {
+    "name": "Ezequiel Tovar",
+    "fangraphs_id": "24064",
+    "savant_id": "678662"
+  },
+  {
+    "name": "Felix Bautista",
+    "fangraphs_id": "20666",
+    "savant_id": "642585"
+  },
+  {
+    "name": "George Kirby",
+    "fangraphs_id": "25436",
+    "savant_id": "669923"
+  },
+  {
+    "name": "George Springer",
+    "fangraphs_id": "12856",
+    "savant_id": "543807"
+  },
+  {
+    "name": "Heliot Ramos",
+    "fangraphs_id": "22515",
+    "savant_id": "671218"
+  },
+  {
+    "name": "Ian Happ",
+    "fangraphs_id": "17919",
+    "savant_id": "664023"
+  },
+  {
+    "name": "Isaac Paredes",
+    "fangraphs_id": "20036",
+    "savant_id": "670623"
+  },
+  {
+    "name": "J.T. Realmuto",
+    "fangraphs_id": "11739",
+    "savant_id": "592663"
+  },
+  {
+    "name": "Jack Flaherty",
+    "fangraphs_id": "17479",
+    "savant_id": "656427"
+  },
+  {
+    "name": "Jake Burger",
+    "fangraphs_id": "22275",
+    "savant_id": "669394"
+  },
+  {
+    "name": "Jasson Dominguez",
+    "fangraphs_id": "28080",
+    "savant_id": "691176"
+  },
+  {
+    "name": "Jeff Hoffman",
+    "fangraphs_id": "17432",
+    "savant_id": "656546"
+  },
+  {
+    "name": "Jeremy Pena",
+    "fangraphs_id": "21636",
+    "savant_id": "665161"
+  },
+  {
+    "name": "Jesus Luzardo",
+    "fangraphs_id": "19959",
+    "savant_id": "666200"
+  },
+  {
+    "name": "Jordan Westburg",
+    "fangraphs_id": "27815",
+    "savant_id": "676059"
+  },
+  {
+    "name": "Josh Jung",
+    "fangraphs_id": "26299",
+    "savant_id": "673962"
+  },
+  {
+    "name": "Jung Hoo Lee",
+    "fangraphs_id": "33824",
+    "savant_id": "808982"
+  },
+  {
+    "name": "Kenley Jansen",
+    "fangraphs_id": "3096",
+    "savant_id": "445276"
+  },
+  {
+    "name": "Kerry Carpenter",
+    "fangraphs_id": "25961",
+    "savant_id": "681481"
+  },
+  {
+    "name": "Kevin Gausman",
+    "fangraphs_id": "14107",
+    "savant_id": "592332"
+  },
+  {
+    "name": "Kodai Senga",
+    "fangraphs_id": "31838",
+    "savant_id": "672540"
+  },
+  {
+    "name": "Kristian Campbell",
+    "fangraphs_id": "33644",
+    "savant_id": "692225"
+  },
+  {
+    "name": "Kyle Finnegan",
+    "fangraphs_id": "15009",
+    "savant_id": "640448"
+  },
+  {
+    "name": "Logan O'Hoppe",
+    "fangraphs_id": "24729",
+    "savant_id": "681351"
+  },
+  {
+    "name": "Lourdes Gurriel Jr.",
+    "fangraphs_id": "19238",
+    "savant_id": "666971"
+  },
+  {
+    "name": "Luis Arraez",
+    "fangraphs_id": "18568",
+    "savant_id": "650333"
+  },
+  {
+    "name": "Luis Castillo",
+    "fangraphs_id": "15689",
+    "savant_id": "622491"
+  },
+  {
+    "name": "Luis Garcia Jr.",
+    "fangraphs_id": "20391",
+    "savant_id": "671277"
+  },
+  {
+    "name": "MacKenzie Gore",
+    "fangraphs_id": "22201",
+    "savant_id": "669022"
+  },
+  {
+    "name": "Maikel Garcia",
+    "fangraphs_id": "22715",
+    "savant_id": "672580"
+  },
+  {
+    "name": "Mark Vientos",
+    "fangraphs_id": "22184",
+    "savant_id": "668901"
+  },
+  {
+    "name": "Masyn Winn",
+    "fangraphs_id": "27479",
+    "savant_id": "691026"
+  },
+  {
+    "name": "Max Meyer",
+    "fangraphs_id": "27474",
+    "savant_id": "676974"
+  },
+  {
+    "name": "Michael Busch",
+    "fangraphs_id": "26319",
+    "savant_id": "683737"
+  },
+  {
+    "name": "Nathan Eovaldi",
+    "fangraphs_id": "9132",
+    "savant_id": "543135"
+  },
+  {
+    "name": "Nick Castellanos",
+    "fangraphs_id": "11737",
+    "savant_id": "592206"
+  },
+  {
+    "name": "Nick Kurtz",
+    "fangraphs_id": "35110",
+    "savant_id": "701762"
+  },
+  {
+    "name": "Nick Lodolo",
+    "fangraphs_id": "26378",
+    "savant_id": "666157"
+  },
+  {
+    "name": "Nick Pivetta",
+    "fangraphs_id": "15454",
+    "savant_id": "601713"
+  },
+  {
+    "name": "Nico Hoerner",
+    "fangraphs_id": "21479",
+    "savant_id": "663538"
+  },
+  {
+    "name": "Nolan Arenado",
+    "fangraphs_id": "9777",
+    "savant_id": "571448"
+  },
+  {
+    "name": "Paul Goldschmidt",
+    "fangraphs_id": "9218",
+    "savant_id": "502671"
+  },
+  {
+    "name": "Pete Fairbanks",
+    "fangraphs_id": "17998",
+    "savant_id": "664126"
+  },
+  {
+    "name": "Randy Arozarena",
+    "fangraphs_id": "19290",
+    "savant_id": "668227"
+  },
+  {
+    "name": "Riley Greene",
+    "fangraphs_id": "25976",
+    "savant_id": "682985"
+  },
+  {
+    "name": "Robbie Ray",
+    "fangraphs_id": "11486",
+    "savant_id": "592662"
+  },
+  {
+    "name": "Roki Sasaki",
+    "fangraphs_id": "35323",
+    "savant_id": "808963"
+  },
+  {
+    "name": "Royce Lewis",
+    "fangraphs_id": "20437",
+    "savant_id": "668904"
+  },
+  {
+    "name": "Ryan Pepiot",
+    "fangraphs_id": "26221",
+    "savant_id": "686752"
+  },
+  {
+    "name": "Ryan Pressly",
+    "fangraphs_id": "7005",
+    "savant_id": "519151"
+  },
+  {
+    "name": "Ryan Walker",
+    "fangraphs_id": "20423",
+    "savant_id": "676254"
+  },
+  {
+    "name": "Sandy Alcantara",
+    "fangraphs_id": "18684",
+    "savant_id": "645261"
+  },
+  {
+    "name": "Seth Lugo",
+    "fangraphs_id": "12447",
+    "savant_id": "607625"
+  },
+  {
+    "name": "Shane Baz",
+    "fangraphs_id": "22264",
+    "savant_id": "669358"
+  },
+  {
+    "name": "Shea Langeliers",
+    "fangraphs_id": "25816",
+    "savant_id": "669127"
+  },
+  {
+    "name": "Shohei Ohtani",
+    "fangraphs_id": "19755",
+    "savant_id": "660271"
+  },
+  {
+    "name": "Sonny Gray",
+    "fangraphs_id": "12768",
+    "savant_id": "543243"
+  },
+  {
+    "name": "Spencer Steer",
+    "fangraphs_id": "26323",
+    "savant_id": "668715"
+  },
+  {
+    "name": "Spencer Torkelson",
+    "fangraphs_id": "27465",
+    "savant_id": "679529"
+  },
+  {
+    "name": "Steven Kwan",
+    "fangraphs_id": "24610",
+    "savant_id": "680757"
+  },
+  {
+    "name": "Taylor Ward",
+    "fangraphs_id": "17548",
+    "savant_id": "621493"
+  },
+  {
+    "name": "Tommy Edman",
+    "fangraphs_id": "19470",
+    "savant_id": "669242"
+  },
+  {
+    "name": "Trevor Megill",
+    "fangraphs_id": "17722",
+    "savant_id": "656730"
+  },
+  {
+    "name": "Trevor Story",
+    "fangraphs_id": "12564",
+    "savant_id": "596115"
+  },
+  {
+    "name": "Tyler Glasnow",
+    "fangraphs_id": "14374",
+    "savant_id": "607192"
+  },
+  {
+    "name": "Tyler O'Neill",
+    "fangraphs_id": "15711",
+    "savant_id": "641933"
+  },
+  {
+    "name": "Tyler Soderstrom",
+    "fangraphs_id": "27467",
+    "savant_id": "691016"
+  },
+  {
+    "name": "Vinnie Pasquantino",
+    "fangraphs_id": "27676",
+    "savant_id": "686469"
+  },
+  {
+    "name": "Will Smith",
+    "fangraphs_id": "19197",
+    "savant_id": "669257"
+  },
+  {
+    "name": "Willson Contreras",
+    "fangraphs_id": "11609",
+    "savant_id": "575929"
+  },
+  {
+    "name": "Xander Bogaerts",
+    "fangraphs_id": "12161",
+    "savant_id": "593428"
+  },
+  {
+    "name": "Xavier Edwards",
+    "fangraphs_id": "22266",
+    "savant_id": "669364"
+  },
+  {
+    "name": "Yainer Diaz",
+    "fangraphs_id": "23003",
+    "savant_id": "673237"
+  },
+  {
+    "name": "Yandy Diaz",
+    "fangraphs_id": "16578",
+    "savant_id": "650490"
+  },
+  {
+    "name": "Yusei Kikuchi",
+    "fangraphs_id": "20633",
+    "savant_id": "579328"
+  },
+  {
+    "name": "Zach Neto",
+    "fangraphs_id": "31347",
+    "savant_id": "687263"
+  }
 ]
