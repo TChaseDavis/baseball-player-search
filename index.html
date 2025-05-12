@@ -61,31 +61,38 @@ fetch('players.json')
     alert("Could not load player list.");
   });
 
-    function searchPlayer() {
-      const nameInput = document.getElementById("playerName").value.trim();
-      if (!nameInput) return;
+function searchPlayer() {
+  const nameInput = document.getElementById("playerName").value.trim();
+  if (!nameInput) return;
 
-      const player = players.find(p => p.name.toLowerCase() === nameInput.toLowerCase());
-      if (!player) {
-        alert("Player not found in database.");
-        return;
-      }
+  const player = players.find(p => p.name.toLowerCase() === nameInput.toLowerCase());
+  if (!player) {
+    alert("Player not found in database.");
+    return;
+  }
 
-      const nameSlug = player.name
-        .toLowerCase()
-        .replace(/\./g, "")               // remove periods
-        .replace(/[^a-z0-9 ]/g, "")       // remove special characters
-        .replace(/ /g, "-");              // replace spaces with dashes
+  const nameSlug = player.name
+    .toLowerCase()
+    .replace(/\./g, "")               // remove periods
+    .replace(/[^a-z0-9 ]/g, "")       // remove special characters
+    .replace(/ /g, "-");              // replace spaces with dashes
 
-      const encodedName = encodeURIComponent(player.name);
-      const savantURL = `https://baseballsavant.mlb.com/savant-player/${nameSlug}-${player.savant_id}`;
-      const fangraphsURL = `https://www.fangraphs.com/players/${nameSlug}/${player.fangraphs_id}/stats`;
-      const referenceURL = `https://www.baseball-reference.com/search/search.fcgi?search=${encodedName}`;
+  const encodedName = encodeURIComponent(player.name);
+  const savantURL = `https://baseballsavant.mlb.com/savant-player/${nameSlug}-${player.savant_id}`;
+  const fangraphsURL = `https://www.fangraphs.com/players/${nameSlug}/${player.fangraphs_id}/stats`;
 
-      window.open(savantURL, '_blank');
-      window.open(fangraphsURL, '_blank');
-      window.open(referenceURL, '_blank');
-    }
+  if (player.position === "pitcher") {
+    const pitcherListURL = `https://www.pitcherlist.com/player/${nameSlug}/`;
+    window.open(savantURL, '_blank');
+    window.open(fangraphsURL, '_blank');
+    window.open(pitcherListURL, '_blank');
+  } else {
+    const referenceURL = `https://www.baseball-reference.com/search/search.fcgi?search=${encodedName}`;
+    window.open(savantURL, '_blank');
+    window.open(fangraphsURL, '_blank');
+    window.open(referenceURL, '_blank');
+  }
+}
   </script>
 </body>
 </html>
