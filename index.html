@@ -45,6 +45,32 @@
 
   <script>
     let players = [];
+   
+    let recentSearches = [];
+
+function updateRecentSearches(name) {
+  // Remove if already in the list
+  recentSearches = recentSearches.filter(p => p !== name);
+  // Add to top
+  recentSearches.unshift(name);
+  // Keep only 10
+  if (recentSearches.length > 10) recentSearches.pop();
+
+  const list = document.getElementById("recentList");
+  list.innerHTML = "";
+  recentSearches.forEach(p => {
+    const li = document.createElement("li");
+    const link = document.createElement("a");
+    link.href = "#";
+    link.textContent = p;
+    link.onclick = () => {
+      document.getElementById("playerName").value = p;
+      searchPlayer();
+    };
+    li.appendChild(link);
+    list.appendChild(li);
+  });
+}
 
 // Load the player data from players.json
 fetch('players.json')
@@ -72,6 +98,7 @@ function searchPlayer() {
   if (!player) {
     alert("Player not found in database.");
     return;
+    updateRecentSearches(player.name);
   }
 
   const nameSlug = player.name
