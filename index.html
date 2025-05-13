@@ -98,7 +98,6 @@ function searchPlayer() {
   if (!player) {
     alert("Player not found in database.");
     return;
-    updateRecentSearches(player.name);
   }
 
   const nameSlug = player.name
@@ -122,6 +121,8 @@ function searchPlayer() {
     window.open(fangraphsURL, '_blank');
     window.open(referenceURL, '_blank');
   }
+  
+     updateRecentSearches(player.name);
 }
   </script>
 </body>
