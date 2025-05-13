@@ -6,32 +6,78 @@
   <title>Baseball Player Search</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
+      font-family: 'Courier New', Courier, monospace;
+      background: #FFF8E1;
+      color: #2C2C2C;
+      margin: 0;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
     }
+
     .container {
       text-align: center;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
     }
+
     input[type="text"] {
-      width: 500px;
-      padding: 10px 15px;
-      font-size: 20px;
+      width: 400px;
+      padding: 12px;
+      font-size: 18px;
+      border: 2px solid #C4BBAF;
+      background: #ffffff;
+      color: #2C2C2C;
     }
+
     button {
-      padding: 10px 20px;
-      font-size: 20px;
+      padding: 12px 20px;
+      font-size: 18px;
       margin-left: 10px;
+      background-color: #8B0000;
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
     }
+
+    button:hover {
+      background-color: #DAA520;
+      color: #2E3A59;
+    }
+
     datalist option {
       font-size: 16px;
+    }
+
+    /* Sidebar for recent searches */
+    #recentListContainer {
+      position: fixed;
+      right: 20px;
+      top: 20px;
+      background: #ffffff;
+      border: 1px solid #C4BBAF;
+      padding: 10px;
+      width: 200px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    }
+
+    #recentListContainer h3 {
+      font-size: 16px;
+      margin-top: 0;
+      color: #2E3A59;
+    }
+
+    #recentList {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    #recentList a {
+      color: #2E3A59;
+      text-decoration: none;
+    }
+
+    #recentList a:hover {
+      color: #3B7A57;
     }
   </style>
 </head>
@@ -41,94 +87,92 @@
     <input list="playerList" id="playerName" name="playerName" aria-labelledby="searchLabel" placeholder="Enter player name..." autocomplete="off" />
     <datalist id="playerList"></datalist>
     <button onclick="searchPlayer()">Search</button>
-</div>
-  
-<div style="position: fixed; right: 20px; top: 20px; background: white; border: 1px solid #ccc; padding: 10px; width: 200px;">
-  <h3 style="font-size: 16px;">History</h3>
-  <ul id="recentList" style="list-style-type: none; padding-left: 0;"></ul>
-</div>
+  </div>
+
+  <div id="recentListContainer">
+    <h3>Recent Searches</h3>
+    <ul id="recentList"></ul>
+  </div>
 
   <script>
     let players = [];
-   
     let recentSearches = [];
 
-function updateRecentSearches(name) {
-  // Remove if already in the list
-  recentSearches = recentSearches.filter(p => p !== name);
-  // Add to top
-  recentSearches.unshift(name);
-  // Keep only 10
-  if (recentSearches.length > 10) recentSearches.pop();
+    function updateRecentSearches(name) {
+      // Remove if already in the list
+      recentSearches = recentSearches.filter(p => p !== name);
+      // Add to top
+      recentSearches.unshift(name);
+      // Keep only 10
+      if (recentSearches.length > 10) recentSearches.pop();
 
-  const list = document.getElementById("recentList");
-  list.innerHTML = "";
-  recentSearches.forEach(p => {
-    const li = document.createElement("li");
-    const link = document.createElement("a");
-    link.href = "#";
-    link.textContent = p;
-    link.onclick = () => {
-      document.getElementById("playerName").value = p;
-      searchPlayer();
-    };
-    li.appendChild(link);
-    list.appendChild(li);
-  });
-}
+      const list = document.getElementById("recentList");
+      list.innerHTML = "";
+      recentSearches.forEach(p => {
+        const li = document.createElement("li");
+        const link = document.createElement("a");
+        link.href = "#";
+        link.textContent = p;
+        link.onclick = () => {
+          document.getElementById("playerName").value = p;
+          searchPlayer();
+        };
+        li.appendChild(link);
+        list.appendChild(li);
+      });
+    }
 
-// Load the player data from players.json
-fetch('players.json')
-  .then(response => response.json())
-  .then(data => {
-    players = data;
-    const datalist = document.getElementById("playerList");
-    players.forEach(player => {
-      const option = document.createElement("option");
-      option.value = player.name;  // Fix: use player.name, not player
-      datalist.appendChild(option);
-    });
-    console.log("Player list loaded.");
-  })
-  .catch(err => {
-    console.error("Error loading players.json", err);
-    alert("Could not load player list.");
-  });
+    fetch('players.json')
+      .then(response => response.json())
+      .then(data => {
+        players = data;
+        const datalist = document.getElementById("playerList");
+        players.forEach(player => {
+          const option = document.createElement("option");
+          option.value = player.name;
+          datalist.appendChild(option);
+        });
+        console.log("Player list loaded.");
+      })
+      .catch(err => {
+        console.error("Error loading players.json", err);
+        alert("Could not load player list.");
+      });
 
-function searchPlayer() {
-  const nameInput = document.getElementById("playerName").value.trim();
-  if (!nameInput) return;
+    function searchPlayer() {
+      const nameInput = document.getElementById("playerName").value.trim();
+      if (!nameInput) return;
 
-  const player = players.find(p => p.name.toLowerCase() === nameInput.toLowerCase());
-  if (!player) {
-    alert("Player not found in database.");
-    return;
-  }
+      const player = players.find(p => p.name.toLowerCase() === nameInput.toLowerCase());
+      if (!player) {
+        alert("Player not found in database.");
+        return;
+      }
 
-  const nameSlug = player.name
-    .toLowerCase()
-    .replace(/\./g, "")               // remove periods
-    .replace(/[^a-z0-9 ]/g, "")       // remove special characters
-    .replace(/ /g, "-");              // replace spaces with dashes
+      const nameSlug = player.name
+        .toLowerCase()
+        .replace(/\./g, "")
+        .replace(/[^a-z0-9 ]/g, "")
+        .replace(/ /g, "-");
 
-  const encodedName = encodeURIComponent(player.name);
-  const savantURL = `https://baseballsavant.mlb.com/savant-player/${nameSlug}-${player.savant_id}`;
-  const fangraphsURL = `https://www.fangraphs.com/players/${nameSlug}/${player.fangraphs_id}/stats`;
+      const encodedName = encodeURIComponent(player.name);
+      const savantURL = `https://baseballsavant.mlb.com/savant-player/${nameSlug}-${player.savant_id}`;
+      const fangraphsURL = `https://www.fangraphs.com/players/${nameSlug}/${player.fangraphs_id}/stats`;
 
-  if (player.position === "pitcher") {
-    const pitcherListURL = `https://www.pitcherlist.com/player/${nameSlug}/`;
-    window.open(savantURL, '_blank');
-    window.open(fangraphsURL, '_blank');
-    window.open(pitcherListURL, '_blank');
-  } else {
-    const referenceURL = `https://www.baseball-reference.com/search/search.fcgi?search=${encodedName}`;
-    window.open(savantURL, '_blank');
-    window.open(fangraphsURL, '_blank');
-    window.open(referenceURL, '_blank');
-  }
-  
-     updateRecentSearches(player.name);
-}
+      if (player.position === "pitcher") {
+        const pitcherListURL = `https://www.pitcherlist.com/player/${nameSlug}/`;
+        window.open(savantURL, '_blank');
+        window.open(fangraphsURL, '_blank');
+        window.open(pitcherListURL, '_blank');
+      } else {
+        const referenceURL = `https://www.baseball-reference.com/search/search.fcgi?search=${encodedName}`;
+        window.open(savantURL, '_blank');
+        window.open(fangraphsURL, '_blank');
+        window.open(referenceURL, '_blank');
+      }
+
+      updateRecentSearches(player.name);
+    }
   </script>
 </body>
 </html>
