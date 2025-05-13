@@ -20,22 +20,29 @@
       text-align: center;
     }
 
+    .form-row {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      margin-top: 20px;
+    }
+
     input[type="text"] {
       width: 400px;
-      padding: 12px;
       font-size: 18px;
       border: 2px solid #C4BBAF;
       background: #ffffff;
       color: #2C2C2C;
+      padding: 12px;
+      box-sizing: border-box;
     }
 
     button {
-      padding: 12px 20px;
       font-size: 18px;
-      margin-left: 10px;
       background-color: #8B0000;
       color: #ffffff;
       border: none;
+      padding: 12px 20px;
       cursor: pointer;
     }
 
@@ -48,7 +55,6 @@
       font-size: 16px;
     }
 
-    /* Sidebar for recent searches */
     #recentListContainer {
       position: fixed;
       right: 20px;
@@ -83,10 +89,12 @@
 </head>
 <body>
   <div class="container">
-    <label for="playerName" id="searchLabel">Search for a Baseball Player:</label><br>
-    <input list="playerList" id="playerName" name="playerName" aria-labelledby="searchLabel" placeholder="Enter player name..." autocomplete="off" />
-    <datalist id="playerList"></datalist>
-    <button onclick="searchPlayer()">Search</button>
+    <label for="playerName" id="searchLabel" style="font-size: 20px;">Search for a Baseball Player:</label>
+    <div class="form-row">
+      <input list="playerList" id="playerName" name="playerName" aria-labelledby="searchLabel" placeholder="Enter player name..." autocomplete="off" />
+      <datalist id="playerList"></datalist>
+      <button onclick="searchPlayer()">Search</button>
+    </div>
   </div>
 
   <div id="recentListContainer">
@@ -99,11 +107,8 @@
     let recentSearches = [];
 
     function updateRecentSearches(name) {
-      // Remove if already in the list
       recentSearches = recentSearches.filter(p => p !== name);
-      // Add to top
       recentSearches.unshift(name);
-      // Keep only 10
       if (recentSearches.length > 10) recentSearches.pop();
 
       const list = document.getElementById("recentList");
@@ -132,7 +137,6 @@
           option.value = player.name;
           datalist.appendChild(option);
         });
-        console.log("Player list loaded.");
       })
       .catch(err => {
         console.error("Error loading players.json", err);
