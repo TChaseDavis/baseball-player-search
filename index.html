@@ -134,7 +134,7 @@
         const datalist = document.getElementById("playerList");
         players.forEach(player => {
           const option = document.createElement("option");
-          option.value = player.name;
+          option.value = `${player.name} (${player.team})`;
           datalist.appendChild(option);
         });
       })
@@ -147,7 +147,8 @@
       const nameInput = document.getElementById("playerName").value.trim();
       if (!nameInput) return;
 
-      const player = players.find(p => p.name.toLowerCase() === nameInput.toLowerCase());
+      const cleanName = nameInput.split(" (")[0];  // removes team part if selected from autocomplete
+      const player = players.find(p => p.name.toLowerCase() === cleanName.toLowerCase());
       if (!player) {
         alert("Player not found in database.");
         return;
@@ -175,7 +176,7 @@
         window.open(referenceURL, '_blank');
       }
 
-      updateRecentSearches(player.name);
+      updateRecentSearches(`${player.name} (${player.team})`);
     }
   </script>
 </body>
