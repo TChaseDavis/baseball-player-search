@@ -133,9 +133,9 @@
       players = data;
       const datalist = document.getElementById("playerList");
       players.forEach(player => {
-      let displayName = player.team;
-      if (player.team && player.team !== "undefined") {
-         displyName += ` (${player.team})`;
+      let displayName = player.Team;
+      if (player.Team && player.Team !== "undefined") {
+         displayName += ` (${player.Team})`;
       }
 
       const option = document.createElement("option");
@@ -152,20 +152,17 @@
       const nameInput = document.getElementById("playerName").value.trim();
       if (!nameInput) return;
 
-      const cleanName = nameInput.split(" (")[0];  // removes team part if selected from autocomplete
-      const player = players.find(p => p.name.toLowerCase() === cleanName.toLowerCase());
-      if (!player) {
-        alert("Player not found in database.");
-        return;
+    const cleanName = nameInput.split(" (")[0];
+const player = players.find(p => p.Name.toLowerCase() === cleanName.toLowerCase());
       }
 
-      const nameSlug = player.name
+      const nameSlug = player.Name
         .toLowerCase()
         .replace(/\./g, "")
         .replace(/[^a-z0-9 ]/g, "")
         .replace(/ /g, "-");
 
-      const encodedName = encodeURIComponent(player.name);
+      const encodedName = encodeURIComponent(player.Name);
       const savantURL = `https://baseballsavant.mlb.com/savant-player/${nameSlug}-${player.savant_id}`;
       const fangraphsURL = `https://www.fangraphs.com/players/${nameSlug}/${player.fangraphs_id}/stats`;
 
@@ -181,7 +178,7 @@
         window.open(referenceURL, '_blank');
       }
 
-      updateRecentSearches(`${player.name} (${player.team})`);
+      updateRecentSearches(`${player.Name} (${player.Team})`);
     }
   </script>
 </body>
