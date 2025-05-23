@@ -133,9 +133,10 @@
       players = data;
       const datalist = document.getElementById("playerList");
       players.forEach(player => {
-      let displayName = player.team
-        ? `${player.name} (${player.team})`
-        : player.name;
+      let displayName = player.team;
+      if (player.team && player.team !== "undefined") {
+         displyName += ` (${player.team})`;
+      }
 
       const option = document.createElement("option");
       option.value = displayName;
