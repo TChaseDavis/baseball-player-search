@@ -128,13 +128,26 @@
     }
 
     fetch('players.json')
-      .then(response => response.json())
-      .then(data => {
-        players = data;
-        const datalist = document.getElementById("playerList");
-        players.forEach(player => {
-          const option = document.createElement("option");
-          option.value = `${player.name} (${player.team})`;
+  .then(response => response.json())
+  .then(data => {
+    players = data;
+    const datalist = document.getElementById("playerList");
+    players.forEach(player => {
+      const displayName = player.team
+        ? `${player.name} (${player.team})`
+        : player.name;
+
+      const option = document.createElement("option");
+      option.value = displayName;
+      datalist.appendChild(option);
+    });
+  })
+  .catch(err => {
+    console.error("Error loading players.json", err);
+    alert("Could not load player list.");
+  });
+
+option.value = displayName;
           datalist.appendChild(option);
         });
       })
