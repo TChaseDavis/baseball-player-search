@@ -127,13 +127,13 @@
       });
     }
 
-    fetch('players.json')
-  .then(response => response.json())
-  .then(data => {
-    players = data;
-    const datalist = document.getElementById("playerList");
-    players.forEach(player => {
-      const displayName = player.team
+ fetch('players.json')
+    .then(response => response.json())
+    .then(data => {
+      players = data;
+      const datalist = document.getElementById("playerList");
+      players.forEach(player => {
+      let displayName = player.team
         ? `${player.name} (${player.team})`
         : player.name;
 
