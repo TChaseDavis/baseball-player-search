@@ -147,15 +147,6 @@
     alert("Could not load player list.");
   });
 
-option.value = displayName;
-          datalist.appendChild(option);
-        });
-      })
-      .catch(err => {
-        console.error("Error loading players.json", err);
-        alert("Could not load player list.");
-      });
-
     function searchPlayer() {
       const nameInput = document.getElementById("playerName").value.trim();
       if (!nameInput) return;
