@@ -143,42 +143,34 @@
     });
   }
 
-  function searchPlayer() {
-    const nameInput = document.getElementById("playerName").value.trim();
-    if (!nameInput) return;
+ function searchPlayer() {
+  const nameInput = document.getElementById("playerName").value.trim();
+  if (!nameInput) return;
 
-    const cleanName = nameInput.split(" (")[0];
-    const player = players.find(p => p.Name.toLowerCase() === cleanName.toLowerCase());
+  const cleanName = nameInput.split(" (")[0];
+  const player = players.find(p => p.Name.toLowerCase() === cleanName.toLowerCase());
 
-    if (!player) {
-      alert("Player not found in database.");
-      return;
-    }
-
-    const nameSlug = player.Name
-      .toLowerCase()
-      .replace(/\./g, "")
-      .replace(/[^a-z0-9 ]/g, "")
-      .replace(/ /g, "-");
-
-    const encodedName = encodeURIComponent(player.Name);
-    const savantURL = `https://baseballsavant.mlb.com/savant-player/${nameSlug}-${player.savant_id}`;
-    const fangraphsURL = `https://www.fangraphs.com/players/${nameSlug}/${player.fangraphs_id}/stats`;
-
-    if (player.position === "pitcher") {
-      const pitcherListURL = `https://www.pitcherlist.com/player/${nameSlug}/`;
-      window.open(savantURL, '_blank');
-      window.open(fangraphsURL, '_blank');
-      window.open(pitcherListURL, '_blank');
-    } else {
-      const referenceURL = `https://www.baseball-reference.com/search/search.fcgi?search=${encodedName}`;
-      window.open(savantURL, '_blank');
-      window.open(fangraphsURL, '_blank');
-      window.open(referenceURL, '_blank');
-    }
-
-    updateRecentSearches(`${player.Name} (${player.Team})`);
+  if (!player) {
+    alert("Player not found in database.");
+    return;
   }
+
+  const nameSlug = player.Name
+    .toLowerCase()
+    .replace(/\./g, "")
+    .replace(/[^a-z0-9 ]/g, "")
+    .replace(/ /g, "-");
+
+  const encodedName = encodeURIComponent(player.Name);
+  const savantURL = `https://baseballsavant.mlb.com/savant-player/${nameSlug}-${player.savant_id}`;
+  const fangraphsURL = `https://www.fangraphs.com/players/${nameSlug}/${player.fangraphs_id}/stats`;
+
+  // ✅ Only open Savant and Fangraphs
+  window.open(savantURL, '_blank');
+  window.open(fangraphsURL, '_blank');
+
+  updateRecentSearches(`${player.Name} (${player.Team})`);
+}
 
   // ✅ Trigger search on Enter key press
   document.getElementById("playerName").addEventListener("keydown", function(event) {
